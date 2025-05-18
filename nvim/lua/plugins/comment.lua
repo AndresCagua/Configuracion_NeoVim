@@ -4,14 +4,13 @@ return {
 		"JoosepAlviste/nvim-ts-context-commentstring", -- Opcional: para comentarios contextuales
 	},
 	keys = { -- Definición de keymaps (mejor práctica)
-		{ "<C-/>", mode = { "n", "v" }, desc = "Toggle comment" },
-		{ "<C-_>", mode = { "n", "v" }, desc = "Toggle comment (alternative)" },
+		{ "<leader>cn", mode = { "n", "v" }, desc = "Toggle comment" },
+		{ "<leader>ct", mode = { "n", "v" }, desc = "Toggle comment (alternative)" },
 		{ "<leader>co", mode = { "n", "v" }, desc = "Toggle comment" },
 		{ "<leader>bo", mode = { "n" }, desc = "Toggle block comment" },
 	},
 	config = function()
 		local comment = require("Comment")
-
 		-- Configuración principal
 		comment.setup({
 			-- Añade espacio después del símbolo de comentario
